@@ -1,20 +1,20 @@
 console.log ("Welcome to Spotify");
 let songIndex = 0;
-let audioElement = new Audio('/songs/A-Thousand-Years.mp3');
+let audioElement = new Audio('./songs/A-Thousand-Years.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let progressbar = document.getElementById('progressbar');
 let gif = document.getElementById('gif');
 let songitem = Array.from( document.getElementsByClassName('songitem'));
 let songs = [
-    {songName : "A Thousand Years", filePath: "/songs/1.mp3", coverPath: "/cover/thousand years.jpg"},
-    {songName : "Aawara Sham Hai", filePath: "/songs/2.mp3", coverPath: "/cover/awara_sham_hai.jpg"},
-    {songName : "Faasle", filePath: "/songs/3.mp3", coverPath: "/cover/Faasle.jpg"},
-    {songName : "Girls like You", filePath: "/songs/4.mp3", coverPath: "/cover/Girls_like_You_cover.png"},
-    {songName : "Jugnu", filePath: "/songs/5.mp3", coverPath: "/cover/Jugnu.jpg"},
-    {songName : "kesariya", filePath: "/songs/6.mp3", coverPath: "/cover/kesariya.jfif"},
-    {songName : "love me like you do", filePath: "/songs/7.mp3", coverPath: "/cover/love me like you do.jfif"},
-    {songName : "o'meri laila", filePath: "/songs/8.mp3", coverPath: "/cover/o meri laila.jpg"},
-    {songName : "Pasoori", filePath: "/songs/9.mp3", coverPath: "/cover/pasoori.jpg"},
+    {songName : "A Thousand Years", filePath: "./songs/1.mp3", coverPath: "./cover/thousand years.jpg"},
+    {songName : "Aawara Sham Hai", filePath: "./songs/2.mp3", coverPath: "./cover/awara_sham_hai.jpg"},
+    {songName : "Faasle", filePath: "./songs/3.mp3", coverPath: "./cover/Faasle.jpg"},
+    {songName : "Girls like You", filePath: "./songs/4.mp3", coverPath: "./cover/Girls_like_You_cover.png"},
+    {songName : "Jugnu", filePath: "./songs/5.mp3", coverPath: "./cover/Jugnu.jpg"},
+    {songName : "kesariya", filePath: "./songs/6.mp3", coverPath: "./cover/kesariya.jfif"},
+    {songName : "love me like you do", filePath: "./songs/7.mp3", coverPath: "./cover/love me like you do.jfif"},
+    {songName : "o'meri laila", filePath: "./songs/8.mp3", coverPath: "./cover/o meri laila.jpg"},
+    {songName : "Pasoori", filePath: "./songs/9.mp3", coverPath: "./cover/pasoori.jpg"},
 ]
 
 songitem.forEach((element , i)=>{
@@ -67,7 +67,7 @@ Array.from( document.getElementsByClassName('songitemPlay')).forEach((element)=>
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
-        audioElement.src = `/songs/${songIndex + 1}.mp3`;
+        audioElement.src = `./songs/${songIndex + 1}.mp3`;
         audioElement.currentTime = 0;
         audioElement.play();
         element.classList.remove('fa-circle-play');
